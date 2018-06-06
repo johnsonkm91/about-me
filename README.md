@@ -1,8 +1,6 @@
 # about-me
 
-## This is an H2
-
-Sample of a **bold paragraph**
+## Questions about me
 
 This is the demonstration for day 2 of 201d36.
 

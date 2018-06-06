@@ -111,3 +111,4 @@ alert('Welcome to Maries guessing game! To play, simply read the following state
     }
   }
 
+
