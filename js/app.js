@@ -1,12 +1,17 @@
 'use strict';
 
-var noYesorNo = 'Yikes! Please enter Yes or No.';
+// var noYesorNo = 'Yikes! Please enter Yes or No.';
 var points = 0;
 var dec1 = 'I am a proud owner of a pet snake';
-var dec2 = 'I was born and raised in Seattle, WA.'
-var dec3 = 'I have 3 sisters.'
-var dec4 =  'I bungee jumped off the Stratosphere hotel in Las Vegas 3 times.'
-var dec5 = 'I lived in New York for 4 years.'
+var dec2 = 'I was born and raised in Seattle, WA.';
+var dec3 = 'I have 3 sisters.';
+var dec4 =  'I bungee jumped off the Stratosphere hotel in Las Vegas 3 times.';
+var dec5 = 'I lived in New York for 4 years.';
+var dec6 = 'Guess a number between 1 and 10.';
+var dec7 = 'Can you guess one of my favorite foods?';
+
+
+var faveFoods = ['pizza', 'pasta', 'tacos', 'bread', 'fruit', 'chicken'];
 
 alert('Welcome to Maries guessing game! To play, simply read the following statements and decide whether or not it is true. Yes = True  No = False');
   
@@ -19,7 +24,7 @@ var quesFuncNo = function(dec, flip) {
     alert ('That is correct!');
     points = points +1;
   } else {
-    prompt ('Not quite - lets move on.');
+    alert ('Not quite - lets move on.');
   }
   if (points === 1) {
     alert ('You have ' + points + ' point');
@@ -28,11 +33,52 @@ var quesFuncNo = function(dec, flip) {
   }
 };
 
+var guessNum = function(dec) {
+  var number = prompt(dec);
+  for (var i = 0; i < 4; i++) {
+    if (number === '7') {
+      alert ('That is correct!');
+      console.log(number + '- That is correct!' );
+      points = points +1;
+      break;
+    } else {
+      if (number < 7) {
+        number = prompt ('That number is too low - try again.');
+      } else { 
+        number = prompt ('That number is too high - try again.');
+      }
+    }
+  }
+  if (points === 1) {
+    alert ('You have ' + points + ' point');
+  } else {
+    alert ('You have ' +points+ ' points' );
+  }
+};
+
+var guessFav = function(dec, guessArray) {
+  var guess = prompt(dec);
+  for (var i = 0; i < guessArray.length; i++) {
+    console.log('i is referring to:', guessArray);
+    if(true === guessArray.includes(guess)) {
+      alert('That is correct!');
+      points = points +1;
+      break;
+    } else {
+      alert('That is not correct'); 
+      prompt('That is not correct. Try again.');
+    }
+  }
+
+};
+
 quesFuncNo(dec1, 'no'); //flip 'no' //pet
 quesFuncNo(dec2, 'yes');//flip 'yes'//city
 quesFuncNo(dec3, 'yes');//flip 'yes'//city
 quesFuncNo(dec4, 'no');//flip 'yes'//jump
-quesFuncNo(dec5, 'no');// flip 'yes'// lived
+quesFuncNo(dec5, 'yes');// flip 'yes'// lived
+guessNum(dec6); // number game - added random selector
+guessFav(dec7, faveFoods);
 
 // var pet = prompt('I am a proud owner of a pet snake');
 // if(pet === 'no') {
@@ -104,41 +150,45 @@ quesFuncNo(dec5, 'no');// flip 'yes'// lived
 // }
   
 
-var number = prompt('Guess a number between 1 and 10.');
 
-for (var i = 0; i < 4; i++) {
-  if (number === '7') {
-    alert ('That is correct!');
-    console.log(number + '- That is correct!' );
-    points = points +1;
-    break;
-  } else {
-    if (number <= 7) {
-      number=prompt ('That number is too low - try again.')
-    } else { 
-      number = prompt ('That number is too high - try again.')
-    }
-  }
-}
-if (points === 1) {
-  alert ('You have ' + points + ' point');
-} else {
-  alert ('You have ' +points+ ' points' );
-}
+
+// var number = prompt('Guess a number between 1 and 10.');
+
+// for (var i = 0; i < 4; i++) {
+//   if (number === '7') {
+//     alert ('That is correct!');
+//     console.log(number + '- That is correct!' );
+//     points = points +1;
+//     break;
+//   } else {
+//     if (number <= 7) {
+//       number=prompt ('That number is too low - try again.')
+//     } else { 
+//       number = prompt ('That number is too high - try again.')
+//     }
+//   }
+// }
+// if (points === 1) {
+//   alert ('You have ' + points + ' point');
+// } else {
+//   alert ('You have ' +points+ ' points' );
+// }
   
 
-var faveFoods = ['pizza', 'pasta', 'tacos', 'bread', 'fruit', 'chicken'];
-var foodGuess = prompt('Can you guess one of my favorite foods?');
-for (var i = 0; i < faveFoods.length; i++) {
-  console.log('i is referring to:', faveFoods[i]);
-  if(foodGuess === faveFoods[i]) {
-    alert('That is correct!');
-    points = points +1;
-    break;
-  } else {
-    alert('That is not correct'); 
-    prompt('That is not correct. Try again.');
-  }
-}
+
+
+// var faveFoods = ['pizza', 'pasta', 'tacos', 'bread', 'fruit', 'chicken'];
+// var foodGuess = prompt('Can you guess one of my favorite foods?');
+// for (var i = 0; i < faveFoods.length; i++) {
+//   console.log('i is referring to:', faveFoods[i]);
+//   if(foodGuess === faveFoods[i]) {
+//     alert('That is correct!');
+//     points = points +1;
+//     break;
+//   } else {
+//     alert('That is not correct'); 
+//     prompt('That is not correct. Try again.');
+//   }
+// }
 
 
