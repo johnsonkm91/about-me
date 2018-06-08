@@ -5,8 +5,8 @@ var points = 0;
 var dec1 = 'I am a proud owner of a pet snake';
 var dec2 = 'I was born and raised in Seattle, WA.'
 var dec3 = 'I have 3 sisters.'
-var dec4 =
-var dec5 =
+var dec4 =  'I bungee jumped off the Stratosphere hotel in Las Vegas 3 times.'
+var dec5 = 'I lived in New York for 4 years.'
 
 alert('Welcome to Maries guessing game! To play, simply read the following statements and decide whether or not it is true. Yes = True  No = False');
   
@@ -14,7 +14,7 @@ alert('Welcome to Maries guessing game! To play, simply read the following state
 
 var quesFuncNo = function(dec, flip) {
   var input = prompt(dec);
-  console.log(dec 'was answered '+input);
+  console.log(dec + 'was answered ' + input);
   if(input === flip) {
     alert ('That is correct!');
     points = points +1;
@@ -26,15 +26,13 @@ var quesFuncNo = function(dec, flip) {
   } else {
     alert ('You have ' +points+ ' points' );
   }
-}
-
-
+};
 
 quesFuncNo(dec1, 'no'); //flip 'no' //pet
 quesFuncNo(dec2, 'yes');//flip 'yes'//city
-quesFuncNo(dec3, 'yes');
-quesFuncNo(dec4, 'no');
-quesFuncNo(dec5, 'no');
+quesFuncNo(dec3, 'yes');//flip 'yes'//city
+quesFuncNo(dec4, 'no');//flip 'yes'//jump
+quesFuncNo(dec5, 'no');// flip 'yes'// lived
 
 // var pet = prompt('I am a proud owner of a pet snake');
 // if(pet === 'no') {
@@ -65,44 +63,45 @@ quesFuncNo(dec5, 'no');
 // }
 
 
-var sibling = prompt('I have 3 sisters.');
-if(sibling === 'yes') {
-  alert ('That is correct!');
-  points = points +1;
-} else {
-  sibling = prompt ('Not quite - lets move on.');
-}
-if (points === 1) {
-  alert ('You have ' + points + ' point');
-} else {
-  alert ('You have ' +points+ ' points' );
-}
+// var sibling = prompt('I have 3 sisters.');
+// if(sibling === 'yes') {
+//   alert ('That is correct!');
+//   points = points +1;
+// } else {
+//   sibling = prompt ('Not quite - lets move on.');
+// }
+// if (points === 1) {
+//   alert ('You have ' + points + ' point');
+// } else {
+//   alert ('You have ' +points+ ' points' );
+// }
 
-var jump = prompt('I bungee jumped off the Stratosphere hotel in Las Vegas 3 times.');
-if(jump === 'no') {
-  alert ('That is correct!');
-  points = points +1;
-} else {
-  jump = prompt ('Not quite - lets move on.');
-}
-if (points === 1) {
-  alert ('You have ' + points + ' point');
-} else {
-  alert ('You have ' +points+ ' points' );
-}
+// var jump = prompt('I bungee jumped off the Stratosphere hotel in Las Vegas 3 times.');
+// if(jump === 'no') {
+//   alert ('That is correct!');
+//   points = points +1;
+// } else {
+//   jump = prompt ('Not quite - lets move on.');
+// }
+// if (points === 1) {
+//   alert ('You have ' + points + ' point');
+// } else {
+//   alert ('You have ' +points+ ' points' );
+// }
+// //dec5
 
-var lived = prompt('I lived in New York for 4 years.');
-if(lived === 'yes') {
-  alert ('That is correct!');
-  points = points +1;
-} else {
-  lived = prompt ('Not quite - lets move on.');
-}
-if (points === 1) {
-  alert ('You have ' + points + ' point');
-} else {
-  alert ('You have ' +points+ ' points' );
-}
+// var lived = prompt('I lived in New York for 4 years.');
+// if(lived === 'yes') {
+//   alert ('That is correct!');
+//   points = points +1;
+// } else {
+//   lived = prompt ('Not quite - lets move on.');
+// }
+// if (points === 1) {
+//   alert ('You have ' + points + ' point');
+// } else {
+//   alert ('You have ' +points+ ' points' );
+// }
   
 
 var number = prompt('Guess a number between 1 and 10.');
